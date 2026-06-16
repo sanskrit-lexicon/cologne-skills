@@ -81,3 +81,10 @@ The same input needs **different** escaping depending on where it lands. Pick by
 `php -l` → one squash PR per repo, body naming the sink + the context-correct fix, `Co-Authored-By: Claude Opus 4.8 (1M context)`. After merge, a Semgrep rescan may re-flag the (now-safe) `echo`/`json_encode` of `$_GET` — dismiss those residuals as false-positive-on-fixed-code with a one-line justification.
 
 See (php → Semgrep, never CodeQL) and (keep PR/commit noise minimal). Companion: [`/cologne-alert-triage`](cologne-alert-triage.md), [`/cologne-security-audit-all`](cologne-security-audit-all.md).
+
+## Agents (fan-out)
+
+This skill pairs with the read-only agents in [`.claude/agents/`](../agents/):
+
+- **`cologne-security-reviewer`** — for `all`, fan out one per repo to surface candidate sinks (it carries the same context→escaping table).
+- **`adversarial-verifier`** — verify each candidate (CONFIRMED / PLAUSIBLE / REFUTED, with the trigger) BEFORE you write the fix. Catches the over-claims and the safe-but-flagged cases.

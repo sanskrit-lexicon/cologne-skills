@@ -52,3 +52,10 @@ For every workflow, flag and then **manually verify** the dangerous patterns:
 A ranked report: per surface, **confirmed** findings (with the exploit path) vs hardening nits vs false-positives-with-rationale. Then: open the hardening PRs, dispose of the SAST/secret alerts (dismiss FPs with written reasons; **reopen** anything mis-dismissed), and **surface** what only the user can do (rotate a leaked Cloud key, restrict a GCP key) — don't bury it.
 
 See,. Triage detail: [`/cologne-alert-triage`](cologne-alert-triage.md).
+
+## Agents (fan-out)
+
+This skill pairs with the read-only agents in [`.claude/agents/`](../agents/):
+
+- **`cologne-security-reviewer`** — fan out one per code-bearing repo for the application-code surface.
+- **`adversarial-verifier`** — verify every flagged workflow / secret finding before dismissing or escalating (it caught the Firebase-web-key-vs-Cloud-key distinction). Never bulk-dismiss without a verifier vote.

@@ -12,6 +12,19 @@ These are the **shareable cut** of the personal `/cologne-*` command family — 
 | `/cologne-security-audit-all [nondict\|dict\|all]` | Org-wide audit: GitHub Actions (pwn-request / script-injection / token scope), committed secrets (incl. the Firebase-web-key vs Cloud-key trap), and SAST coverage. Read-mostly; PRs only for hardening. |
 | `/cologne-alert-triage <repo>` | Triage a repo's CodeQL + Semgrep alerts: fix the genuinely-exploitable ones (PR), dismiss false-positives/won't-fixes with **written justifications**. Handles the Semgrep `echoed-request` taint-mode quirk and "php → Semgrep, never CodeQL". |
 
+## Agents
+
+Read-only worker agents in [`.claude/agents/`](.claude/agents/) that the skills fan out (and that you can invoke directly). Copy them to `~/.claude/agents/` the same way as the commands.
+
+| Agent | Role |
+|---|---|
+| `adversarial-verifier` | Verify one finding → CONFIRMED / PLAUSIBLE / REFUTED with the trigger. The check that stops both shipped bugs and buried real issues. |
+| `cologne-security-reviewer` | Hunt injection in a repo's web code with the escaping playbook; returns ranked candidates (no fixes). |
+| `fact-check-against-source` | Verify every claim in a doc/report against ground-truth code/data; flags inaccuracies with quotes. |
+| `cologne-data-integrity-auditor` | Audit data repos for corpus-signal leakage, overlay-wipe seeders, lossy normalization, generated-vs-canonical drift. |
+
+All are **read-only** (no Edit/Write; no `gh pr create/merge`, no `git push`) — the skill or main loop does the PR-ing, so a fanned-out agent can never mutate a repo.
+
 ## Install
 
 **As personal commands** (available in every Claude Code session, any directory):

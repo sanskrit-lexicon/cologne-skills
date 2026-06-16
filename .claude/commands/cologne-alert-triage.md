@@ -63,3 +63,9 @@ When unsure, **read the flagged line and its data flow** before deciding. Cite t
 For the FP/won't-fix set, `PATCH repos/{slug}/code-scanning/alerts/{n}` with `state=dismissed`, the reason, and a justification quoting the line. For a repo whose *entire* open set is one triaged category, dismiss-all-open is safe **only after** you've confirmed the complete list matches the expected rules+paths.
 
 End with a short verdict table (real → PR; FP/won't-fix → dismissed, with counts). Keep maintainer-facing noise minimal.
+
+## Agents (fan-out)
+
+Pair with the read-only agent in [`.claude/agents/`](../agents/):
+
+- **`adversarial-verifier`** — verify each non-trivial alert (CONFIRMED / PLAUSIBLE / REFUTED) before fixing OR dismissing. The bar to dismiss as a false-positive is a REFUTED vote that quotes the guard.
