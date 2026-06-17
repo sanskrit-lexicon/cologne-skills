@@ -1,16 +1,24 @@
 # cologne-skills
 
-Portable [Claude Code](https://claude.com/claude-code) skills for security and maintenance work across the [Sanskrit Lexicon](https://github.com/sanskrit-lexicon) (Cologne Digital Sanskrit Dictionaries) GitHub org.
+Portable [Claude Code](https://claude.com/claude-code) skills for security, maintenance, and digitization work across the [Sanskrit Lexicon](https://github.com/sanskrit-lexicon) (Cologne Digital Sanskrit Dictionaries) GitHub org.
 
 These are the **shareable cut** of the personal `/cologne-*` command family — version-controlled so they work on any machine and can be shared with collaborators, instead of living only in a personal `~/.claude/commands/`. Each skill encodes a battle-tested playbook (escaping decision tables, false-positive heuristics, the gotchas) rather than a generic template.
 
 ## Skills
+
+### Security & maintenance
 
 | Command | What it does |
 |---|---|
 | `/cologne-php-xss-sweep <repo\|all>` | Find + fix reflected-XSS / SQL-injection / injection in a repo's PHP web-frontend, with **context-correct escaping** (HTML body/attr → `htmlspecialchars`; JS-in-`<script>` → `json_encode(JSON_HEX_*)`; URL-in-JS-in-attribute → `urlencode`; JSONP → whitelist; SQL literal → prepared/`''`; PCRE → `preg_quote`). PR-only. |
 | `/cologne-security-audit-all [nondict\|dict\|all]` | Org-wide audit: GitHub Actions (pwn-request / script-injection / token scope), committed secrets (incl. the Firebase-web-key vs Cloud-key trap), and SAST coverage. Read-mostly; PRs only for hardening. |
 | `/cologne-alert-triage <repo>` | Triage a repo's CodeQL + Semgrep alerts: fix the genuinely-exploitable ones (PR), dismiss false-positives/won't-fixes with **written justifications**. Handles the Semgrep `echoed-request` taint-mode quirk and "php → Semgrep, never CodeQL". |
+
+### Digitization
+
+| Command | What it does |
+|---|---|
+| `/cologne-preface-ocr <CODE\|all>` | OCR a dictionary's **front matter** (title pages, prefaces, abbreviation lists, addenda) from the csldoc scans into faithful Markdown, then add **English + Russian** translations, consolidated single-file editions, and a README index. Bakes in the vision-OCR playbook: crop scans to **native-resolution column-bands ≤1900 px** before reading (a downsampled full page yields fluent-but-fabricated text), trust the toctree page order, keep Sanskrit/Devanāgarī verbatim, Cyrillic names in Russian, omit digitizer stamps, never commit temp crops. First run produced [`PWG/prefaces/`](https://github.com/sanskrit-lexicon/PWG/tree/master/prefaces) (27 pages × 3 languages). |
 
 ## Agents
 
@@ -46,6 +54,7 @@ Invoke with the slash name, e.g. `/cologne-php-xss-sweep csl-santam`.
 - **GitHub CLI** (`gh`) authenticated with `repo` scope (and `read:project` for any project-board work).
 - **`php`** on PATH for the `php -l` lint step (Windows: e.g. XAMPP's `C:\xampp\php\php.exe` — alias it to `php` or adjust the lint command).
 - **`python3`** for the helper scans (enumeration, workflow-risk, secrets).
+- For `/cologne-preface-ocr`: **`curl`** (scan download) and **Pillow** (`pip install pillow`) for native-resolution image cropping. OCR is done by the model's own vision — no Tesseract/OCR engine needed.
 
 ## Conventions baked in
 
