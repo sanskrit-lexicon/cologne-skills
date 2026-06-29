@@ -1,0 +1,4 @@
+interface:
+  display_name: "Sundara Lexical QA"
+  short_description: "QA Sundara lexical and cross-text notes"
+  default_prompt: "Use $sundara-lexical-layer-qa to review Sundara lexical, etymology, and cross-text annotation layers."

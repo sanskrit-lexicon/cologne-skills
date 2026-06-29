@@ -6,6 +6,25 @@ These are the **shareable cut** of the personal `/cologne-*` command family — 
 
 ## Skills
 
+### Codex + Claude Code portable skills
+
+Reusable `SKILL.md` folders live in [`skills/`](skills/). They are written as portable runbooks:
+Codex can invoke them as skills, while Claude Code can read the same `SKILL.md` files and follow
+the instructions manually.
+
+| Skill | What it does |
+|---|---|
+| `ai-state-journal-maintainer` | Maintain tracked `.ai_state.md` session journals and handoff state. |
+| `cdsl-newsletter-publisher` | Prepare paired CDSL newsletter blog posts and email drafts. |
+| `claude-codex-skill-porter` | Audit/update skills so they work in both Codex and Claude Code. |
+| `cologne-markup-batch` | Prepare safe Cologne dictionary markup-normalization batches. |
+| `cologne-question-research` | Research Cologne editorial questions before source edits. |
+| `cologne-text-correction-pr` | Prepare validated Cologne text-correction PRs with registry/read-only gates. |
+| `commentary-strategies-editorial-pipeline` | Sync CommentaryStrategies publication state across manuscripts, hubs, and journals. |
+| `dependabot-pr-triage` | Triage dependency update PRs and recommend merge/hold/close. |
+| `publication-readiness-auditor` | Audit scholarly article readiness gates and metadata consistency. |
+| `sundara-lexical-layer-qa` | QA Sundara lexical, etymology, and cross-text annotation layers. |
+
 ### Security & maintenance
 
 | Command | What it does |
@@ -34,6 +53,12 @@ Read-only worker agents in [`.claude/agents/`](.claude/agents/) that the skills 
 All are **read-only** (no Edit/Write; no `gh pr create/merge`, no `git push`) — the skill or main loop does the PR-ing, so a fanned-out agent can never mutate a repo.
 
 ## Install
+
+**As Codex skills**: copy or symlink the desired folders from `skills/` into
+`~/.codex/skills/`.
+
+**As Claude Code runbooks**: open the relevant `skills/<name>/SKILL.md` and follow it directly.
+Each skill includes a compatibility rule for Codex and Claude Code.
 
 **As personal commands** (available in every Claude Code session, any directory):
 

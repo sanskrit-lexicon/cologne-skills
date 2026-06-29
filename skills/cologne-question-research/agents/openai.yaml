@@ -1,0 +1,4 @@
+interface:
+  display_name: "Cologne Question Research"
+  short_description: "Research Sanskrit Lexicon editorial issues"
+  default_prompt: "Use $cologne-question-research to investigate a Sanskrit Lexicon editorial question before changing data."
