@@ -1,0 +1,4 @@
+interface:
+  display_name: "Cologne Text Correction PR"
+  short_description: "Prepare CDSL text-correction PRs"
+  default_prompt: "Use $cologne-text-correction-pr to inspect a Sanskrit Lexicon text-correction issue and prepare a validated correction PR."

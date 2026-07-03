@@ -1,0 +1,4 @@
+interface:
+  display_name: "Publication Readiness Auditor"
+  short_description: "Audit article publication readiness gates"
+  default_prompt: "Use $publication-readiness-auditor to cross-check article readiness, metadata, gates, and submission state."

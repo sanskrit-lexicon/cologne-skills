@@ -1,0 +1,4 @@
+interface:
+  display_name: "CDSL Newsletter Publisher"
+  short_description: "Prepare CDSL newsletter posts and emails"
+  default_prompt: "Use $cdsl-newsletter-publisher to prepare monthly or annual CDSL newsletter blog and email drafts."

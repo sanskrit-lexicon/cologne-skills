@@ -1,0 +1,4 @@
+interface:
+  display_name: "AI State Journal Maintainer"
+  short_description: "Maintain .ai_state.md session journals"
+  default_prompt: "Use $ai-state-journal-maintainer to update or audit a repository .ai_state.md session journal."
