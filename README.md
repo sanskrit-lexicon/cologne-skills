@@ -1,5 +1,7 @@
 # cologne-skills
 
+_Created: 16-06-2026 · Last updated: 05-07-2026_
+
 Portable [Claude Code](https://claude.com/claude-code) skills for security, maintenance, and digitization work across the [Sanskrit Lexicon](https://github.com/sanskrit-lexicon) (Cologne Digital Sanskrit Dictionaries) GitHub org.
 
 These are the **shareable cut** of the personal `/cologne-*` command family — version-controlled so they work on any machine and can be shared with collaborators, instead of living only in a personal `~/.claude/commands/`. Each skill encodes a battle-tested playbook (escaping decision tables, false-positive heuristics, the gotchas) rather than a generic template.
@@ -38,6 +40,29 @@ the instructions manually.
 | Command | What it does |
 |---|---|
 | `/cologne-preface-ocr <CODE\|all>` | OCR a dictionary's **front matter** (title pages, prefaces, abbreviation lists, addenda) from the csldoc scans into faithful Markdown, then add **English + Russian** translations, consolidated single-file editions, and a README index. Bakes in the vision-OCR playbook: crop scans to **native-resolution column-bands ≤1900 px** before reading (a downsampled full page yields fluent-but-fabricated text), trust the toctree page order, keep Sanskrit/Devanāgarī verbatim, Cyrillic names in Russian, omit digitizer stamps, never commit temp crops. First run produced [`PWG/prefaces/`](https://github.com/sanskrit-lexicon/PWG/tree/master/prefaces) (27 pages × 3 languages). |
+
+## Example invocation
+
+Real skill, real trigger — [`skills/cologne-question-research/SKILL.md`](skills/cologne-question-research/SKILL.md)
+fires on an issue like this (its actual `description:` frontmatter):
+
+> "Use when an issue is labeled question, asks for scholarly judgment, compares
+> readings across dictionaries or scans, lacks an exact correction, depends on
+> the meaning of a local marker, abbreviation, tag, name, or editorial policy,
+> or requires evidence before deciding whether a CDSL markup or text change is
+> warranted."
+
+Its actual workflow (from the same file) separates evidence-gathering from
+editing: state the research question in one sentence → gather primary local
+evidence (source record, generated XML, scans, neighboring/parallel dictionary
+entries) → classify the outcome as one of `answer-only` /
+`ready-for-correction` / `ready-for-markup-batch` / `needs-human-review` → if
+`ready-for-correction`, hand off to `$cologne-text-correction-pr` rather than
+editing source in the same pass. Invoke it directly against a real issue with:
+
+```sh
+/cologne-question-research PWG 123
+```
 
 ## Agents
 
@@ -96,3 +121,5 @@ Distilled from a security + maintenance pass across the Sanskrit Lexicon org (re
 ## License
 
 MIT — see [LICENSE](LICENSE).
+
+_Dr. Mārcis Gasūns_
