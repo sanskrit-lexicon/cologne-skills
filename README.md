@@ -1,6 +1,6 @@
 # cologne-skills
 
-_Created: 16-06-2026 · Last updated: 05-07-2026_
+_Created: 16-06-2026 · Last updated: 11-07-2026_
 
 Portable [Claude Code](https://claude.com/claude-code) skills for security, maintenance, and digitization work across the [Sanskrit Lexicon](https://github.com/sanskrit-lexicon) (Cologne Digital Sanskrit Dictionaries) GitHub org.
 
@@ -10,7 +10,7 @@ These are the **shareable cut** of the personal `/cologne-*` command family — 
 
 ### Codex + Claude Code portable skills
 
-Reusable `SKILL.md` folders live in [`skills/`](skills/). They are written as portable runbooks:
+Reusable `SKILL.md` folders live in [`skills/`](https://github.com/sanskrit-lexicon/cologne-skills/tree/master/skills). They are written as portable runbooks:
 Codex can invoke them as skills, while Claude Code can read the same `SKILL.md` files and follow
 the instructions manually.
 
@@ -43,7 +43,7 @@ the instructions manually.
 
 ## Example invocation
 
-Real skill, real trigger — [`skills/cologne-question-research/SKILL.md`](skills/cologne-question-research/SKILL.md)
+Real skill, real trigger — [`skills/cologne-question-research/SKILL.md`](https://github.com/sanskrit-lexicon/cologne-skills/blob/master/skills/cologne-question-research/SKILL.md)
 fires on an issue like this (its actual `description:` frontmatter):
 
 > "Use when an issue is labeled question, asks for scholarly judgment, compares
@@ -66,7 +66,7 @@ editing source in the same pass. Invoke it directly against a real issue with:
 
 ## Agents
 
-Read-only worker agents in [`.claude/agents/`](.claude/agents/) that the skills fan out (and that you can invoke directly). Copy them to `~/.claude/agents/` the same way as the commands.
+Read-only worker agents in [`.claude/agents/`](https://github.com/sanskrit-lexicon/cologne-skills/tree/master/.claude/agents) that the skills fan out (and that you can invoke directly). Copy them to `~/.claude/agents/` the same way as the commands.
 
 | Agent | Role |
 |---|---|
@@ -120,6 +120,6 @@ Distilled from a security + maintenance pass across the Sanskrit Lexicon org (re
 
 ## License
 
-MIT — see [LICENSE](LICENSE).
+MIT — see [LICENSE](https://github.com/sanskrit-lexicon/cologne-skills/blob/master/LICENSE).
 
 _Dr. Mārcis Gasūns_
