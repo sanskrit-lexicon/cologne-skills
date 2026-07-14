@@ -39,7 +39,7 @@ the instructions manually.
 
 | Command | What it does |
 |---|---|
-| `/cologne-preface-ocr <CODE\|all>` | OCR a dictionary's **front matter** (title pages, prefaces, abbreviation lists, addenda) from the csldoc scans into faithful Markdown, then add **English + Russian** translations, consolidated single-file editions, and a README index. Bakes in the vision-OCR playbook: crop scans to **native-resolution column-bands ≤1900 px** before reading (a downsampled full page yields fluent-but-fabricated text), trust the toctree page order, keep Sanskrit/Devanāgarī verbatim, Cyrillic names in Russian, omit digitizer stamps, never commit temp crops. First run produced [`PWG/prefaces/`](https://github.com/sanskrit-lexicon/PWG/tree/master/prefaces) (27 pages × 3 languages). |
+| `/cologne-preface-ocr <CODE\|all>` | OCR a dictionary's **front matter** (title pages, prefaces, abbreviation lists, addenda) from the csldoc scans into faithful Markdown, then add **English + Russian** translations, consolidated single-file editions, and a README index. Bakes in the vision-OCR playbook: crop scans to **native-resolution column-bands ≤1900 px** before reading (a downsampled full page yields fluent-but-fabricated text), trust the toctree page order, keep Sanskrit/Devanāgarī verbatim, Cyrillic names in Russian, omit digitizer stamps, never commit temp crops. First run produced [`PWG/prefaces/`](https://github.com/sanskrit-lexicon/PWG/tree/main/prefaces) (27 pages × 3 languages). |
 
 ## Example invocation
 
