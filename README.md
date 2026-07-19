@@ -1,10 +1,31 @@
 # cologne-skills
 
+_Created: 16-06-2026 · Last updated: 11-07-2026_
+
 Portable [Claude Code](https://claude.com/claude-code) skills for security, maintenance, and digitization work across the [Sanskrit Lexicon](https://github.com/sanskrit-lexicon) (Cologne Digital Sanskrit Dictionaries) GitHub org.
 
 These are the **shareable cut** of the personal `/cologne-*` command family — version-controlled so they work on any machine and can be shared with collaborators, instead of living only in a personal `~/.claude/commands/`. Each skill encodes a battle-tested playbook (escaping decision tables, false-positive heuristics, the gotchas) rather than a generic template.
 
 ## Skills
+
+### Codex + Claude Code portable skills
+
+Reusable `SKILL.md` folders live in [`skills/`](https://github.com/sanskrit-lexicon/cologne-skills/tree/master/skills). They are written as portable runbooks:
+Codex can invoke them as skills, while Claude Code can read the same `SKILL.md` files and follow
+the instructions manually.
+
+| Skill | What it does |
+|---|---|
+| `ai-state-journal-maintainer` | Maintain tracked `.ai_state.md` session journals and handoff state. |
+| `cdsl-newsletter-publisher` | Prepare paired CDSL newsletter blog posts and email drafts. |
+| `claude-codex-skill-porter` | Audit/update skills so they work in both Codex and Claude Code. |
+| `cologne-markup-batch` | Prepare safe Cologne dictionary markup-normalization batches. |
+| `cologne-question-research` | Research Cologne editorial questions before source edits. |
+| `cologne-text-correction-pr` | Prepare validated Cologne text-correction PRs with registry/read-only gates. |
+| `commentary-strategies-editorial-pipeline` | Sync CommentaryStrategies publication state across manuscripts, hubs, and journals. |
+| `dependabot-pr-triage` | Triage dependency update PRs and recommend merge/hold/close. |
+| `publication-readiness-auditor` | Audit scholarly article readiness gates and metadata consistency. |
+| `sundara-lexical-layer-qa` | QA Sundara lexical, etymology, and cross-text annotation layers. |
 
 ### Security & maintenance
 
@@ -20,9 +41,32 @@ These are the **shareable cut** of the personal `/cologne-*` command family — 
 |---|---|
 | `/cologne-preface-ocr <CODE\|all>` | OCR a dictionary's **front matter** (title pages, prefaces, abbreviation lists, addenda) from the csldoc scans into faithful Markdown, then add **English + Russian** translations, consolidated single-file editions, and a README index. Bakes in the vision-OCR playbook: crop scans to **native-resolution column-bands ≤1900 px** before reading (a downsampled full page yields fluent-but-fabricated text), trust the toctree page order, keep Sanskrit/Devanāgarī verbatim, Cyrillic names in Russian, omit digitizer stamps, never commit temp crops. First run produced [`PWG/prefaces/`](https://github.com/sanskrit-lexicon/PWG/tree/main/prefaces) (27 pages × 3 languages). |
 
+## Example invocation
+
+Real skill, real trigger — [`skills/cologne-question-research/SKILL.md`](https://github.com/sanskrit-lexicon/cologne-skills/blob/master/skills/cologne-question-research/SKILL.md)
+fires on an issue like this (its actual `description:` frontmatter):
+
+> "Use when an issue is labeled question, asks for scholarly judgment, compares
+> readings across dictionaries or scans, lacks an exact correction, depends on
+> the meaning of a local marker, abbreviation, tag, name, or editorial policy,
+> or requires evidence before deciding whether a CDSL markup or text change is
+> warranted."
+
+Its actual workflow (from the same file) separates evidence-gathering from
+editing: state the research question in one sentence → gather primary local
+evidence (source record, generated XML, scans, neighboring/parallel dictionary
+entries) → classify the outcome as one of `answer-only` /
+`ready-for-correction` / `ready-for-markup-batch` / `needs-human-review` → if
+`ready-for-correction`, hand off to `$cologne-text-correction-pr` rather than
+editing source in the same pass. Invoke it directly against a real issue with:
+
+```sh
+/cologne-question-research PWG 123
+```
+
 ## Agents
 
-Read-only worker agents in [`.claude/agents/`](.claude/agents/) that the skills fan out (and that you can invoke directly). Copy them to `~/.claude/agents/` the same way as the commands.
+Read-only worker agents in [`.claude/agents/`](https://github.com/sanskrit-lexicon/cologne-skills/tree/master/.claude/agents) that the skills fan out (and that you can invoke directly). Copy them to `~/.claude/agents/` the same way as the commands.
 
 | Agent | Role |
 |---|---|
@@ -34,6 +78,12 @@ Read-only worker agents in [`.claude/agents/`](.claude/agents/) that the skills 
 All are **read-only** (no Edit/Write; no `gh pr create/merge`, no `git push`) — the skill or main loop does the PR-ing, so a fanned-out agent can never mutate a repo.
 
 ## Install
+
+**As Codex skills**: copy or symlink the desired folders from `skills/` into
+`~/.codex/skills/`.
+
+**As Claude Code runbooks**: open the relevant `skills/<name>/SKILL.md` and follow it directly.
+Each skill includes a compatibility rule for Codex and Claude Code.
 
 **As personal commands** (available in every Claude Code session, any directory):
 
@@ -70,4 +120,6 @@ Distilled from a security + maintenance pass across the Sanskrit Lexicon org (re
 
 ## License
 
-MIT — see [LICENSE](LICENSE).
+MIT — see [LICENSE](https://github.com/sanskrit-lexicon/cologne-skills/blob/master/LICENSE).
+
+_Dr. Mārcis Gasūns_

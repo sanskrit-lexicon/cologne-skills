@@ -1,0 +1,4 @@
+interface:
+  display_name: "Dependabot PR Triage"
+  short_description: "Triage dependency update PRs"
+  default_prompt: "Use $dependabot-pr-triage to inspect a Dependabot PR, classify risk, run minimal checks, and recommend merge, hold, or close."

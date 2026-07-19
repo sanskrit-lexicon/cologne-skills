@@ -1,0 +1,4 @@
+interface:
+  display_name: "Cologne Markup Batch"
+  short_description: "Batch Cologne dictionary markup fixes"
+  default_prompt: "Use $cologne-markup-batch to prepare a safe batch of Sanskrit Lexicon markup corrections."

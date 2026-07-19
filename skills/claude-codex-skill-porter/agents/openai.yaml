@@ -1,0 +1,4 @@
+interface:
+  display_name: "Claude Codex Skill Porter"
+  short_description: "Make skills portable across Codex and Claude Code"
+  default_prompt: "Use $claude-codex-skill-porter to audit or update a skill so it works in both Codex and Claude Code."

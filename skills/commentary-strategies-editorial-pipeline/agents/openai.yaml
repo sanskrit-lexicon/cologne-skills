@@ -1,0 +1,4 @@
+interface:
+  display_name: "Commentary Editorial Pipeline"
+  short_description: "Sync CommentaryStrategies publication state"
+  default_prompt: "Use $commentary-strategies-editorial-pipeline to cross-check and update CommentaryStrategies publication readiness state."
