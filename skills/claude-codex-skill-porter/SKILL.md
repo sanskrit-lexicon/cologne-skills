@@ -1,3 +1,5 @@
+_Created: 03-07-2026 · Last updated: 05-09-2026_
+
 ---
 name: claude-codex-skill-porter
 description: Audit and update skills so they work in both Codex and Claude Code. Use when a local task asks an agent to create, port, review, or repair SKILL.md instructions, agents/openai.yaml metadata, bundled references, or skill wording that currently assumes only one agent host.
@@ -31,3 +33,5 @@ Stop and report when a skill depends on a host-only tool with no practical Claud
 ## References
 
 - Read `references/skill-portability.md` for portability checklist and validation expectations.
+
+_Dr. Mārcis Gasūns_

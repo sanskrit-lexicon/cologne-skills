@@ -1,3 +1,5 @@
+_Created: 16-06-2026 · Last updated: 05-09-2026_
+
 ---
 description: Triage a Sanskrit Lexicon repo's CodeQL + Semgrep code-scanning alerts — classify real-vs-false-positive, fix the genuine ones (PR), and dismiss the rest with written justifications. Judgment — Sonnet/Opus tier.
 ---
@@ -6,7 +8,7 @@ description: Triage a Sanskrit Lexicon repo's CodeQL + Semgrep code-scanning ale
 
 Work a repo's open code-scanning alerts (CodeQL and/or Semgrep) down to zero noise: fix the genuinely-exploitable ones via PR, and **dismiss the false-positives and won't-fixes with a one-line written justification each** (reversible; visible in the Security tab). Avoids both extremes — leaving hundreds of red alerts, and bulk-dismissing without verifying.
 
-Argument `$ARGUMENTS`: a repo name (e.g. `csl-apidev`). Use [`/cologne-security-audit-all`](cologne-security-audit-all.md) for the org-wide sweep.
+Argument `$ARGUMENTS`: a repo name (e.g. `csl-apidev`). Use [`/cologne-security-audit-all`](https://github.com/sanskrit-lexicon/cologne-skills/blob/master/.claude/commands/cologne-security-audit-all.md) for the org-wide sweep.
 
 ---
 
@@ -40,7 +42,7 @@ After the rescan, the noise alerts auto-close (the new SARIF supersedes them).
 
 | Pattern | Verdict |
 |---|---|
-| `php …echoed-request` / `printed-request` (Semgrep) in **served** `getword.php`/`query.php` | Real reflected-XSS → fix via [`/cologne-php-xss-sweep`](cologne-php-xss-sweep.md) |
+| `php …echoed-request` / `printed-request` (Semgrep) in **served** `getword.php`/`query.php` | Real reflected-XSS → fix via [`/cologne-php-xss-sweep`](https://github.com/sanskrit-lexicon/cologne-skills/blob/master/.claude/commands/cologne-php-xss-sweep.md) |
 | same, in `webbackup/`/`sample/`/dev iterations | won't-fix (non-served) → `.semgrepignore` or dismiss |
 | `js/incomplete-(multi-character-)sanitization` in a **build script** escaping *trusted* dict XML/Markdown (`stripTags`, `mdCell`) | **false positive** — formatting helper, not a security sanitizer |
 | `py/redos` on a regex in an `# not used` var / one-off `issue*/` script | won't-fix (unreachable, offline) |
@@ -69,3 +71,5 @@ End with a short verdict table (real → PR; FP/won't-fix → dismissed, with co
 Pair with the read-only agent in [`.claude/agents/`](../agents/):
 
 - **`adversarial-verifier`** — verify each non-trivial alert (CONFIRMED / PLAUSIBLE / REFUTED) before fixing OR dismissing. The bar to dismiss as a false-positive is a REFUTED vote that quotes the guard.
+
+_Dr. Mārcis Gasūns_

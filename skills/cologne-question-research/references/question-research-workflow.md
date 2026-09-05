@@ -1,3 +1,5 @@
+_Created: 03-07-2026 · Last updated: 05-09-2026_
+
 # Question Research Workflow
 
 Use this reference for Cologne dictionary issues where the right answer is not yet a precise source edit.
@@ -47,3 +49,5 @@ Write a compact research note with:
 - next resume point for a correction or markup skill
 
 Update `.ai_state.md` with the same decision so future sessions do not repeat the research.
+
+_Dr. Mārcis Gasūns_

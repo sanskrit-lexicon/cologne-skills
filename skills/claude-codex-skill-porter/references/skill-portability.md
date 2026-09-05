@@ -1,3 +1,5 @@
+_Created: 03-07-2026 · Last updated: 05-09-2026_
+
 # Skill Portability Reference
 
 Use this reference when creating or updating user skills.
@@ -44,3 +46,5 @@ Then grep for host-specific trigger wording, unresolved template placeholders, m
 - Port an older skill so Claude Code can use it as a Markdown runbook.
 - Review a new skill for Codex-only assumptions.
 - Regenerate stale `agents/openai.yaml` after changing a skill trigger.
+
+_Dr. Mārcis Gasūns_

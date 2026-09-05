@@ -1,3 +1,5 @@
+_Created: 03-07-2026 · Last updated: 05-09-2026_
+
 ---
 name: cologne-text-correction-pr
 description: Prepare and validate Sanskrit Lexicon / Cologne Digital Sanskrit Dictionaries text-correction pull requests. Use when a GitHub issue or task asks an agent to fix dictionary source text, headwords, encoding/transliteration text, or typo/scan-error corrections using CDSL updateByLine/change-file workflows, especially for csl-orig or dictionary repos such as AP90, MWS, PWG, PWK, SKD, VCP, WIL, SHS, and related correction staging repos.
@@ -71,3 +73,5 @@ In those cases, leave a concise finding with the missing evidence and update the
 
 - Read `references/cdsl-correction-workflow.md` before touching csl-orig or csl-corrections.
 - Use `scripts/inspect_issue.py` for a first-pass issue clue summary.
+
+_Dr. Mārcis Gasūns_

@@ -1,3 +1,5 @@
+_Created: 03-07-2026 · Last updated: 05-09-2026_
+
 ---
 name: cologne-question-research
 description: Research Sanskrit Lexicon / Cologne Digital Sanskrit Dictionaries editorial questions before changing source data. Use when an issue is labeled question, asks for scholarly judgment, compares readings across dictionaries or scans, lacks an exact correction, depends on the meaning of a local marker, abbreviation, tag, name, or editorial policy, or requires evidence before deciding whether a CDSL markup or text change is warranted.
@@ -36,3 +38,5 @@ Write and follow this skill so it works in both Codex and Claude Code. Treat `$s
 ## Output Shape
 
 Lead with the conclusion, then list concise evidence. Preserve exact source snippets only as short quotes needed to identify the record. Include file paths, line numbers, issue links, scan page identifiers, and dictionary abbreviations whenever available.
+
+_Dr. Mārcis Gasūns_

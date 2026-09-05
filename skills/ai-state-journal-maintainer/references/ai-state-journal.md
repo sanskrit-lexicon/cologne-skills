@@ -1,3 +1,5 @@
+_Created: 03-07-2026 · Last updated: 05-09-2026_
+
 # AI State Journal Reference
 
 Use this reference for repositories with a tracked `.ai_state.md`.
@@ -44,3 +46,5 @@ On session end or stop request:
 - Update `.ai_state.md` after a validation-only PR.
 - Tidy a stale WIP section before handing off to another agent.
 - Record that a build failed because of a known unrelated issue.
+
+_Dr. Mārcis Gasūns_

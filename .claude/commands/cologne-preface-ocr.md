@@ -1,3 +1,5 @@
+_Created: 17-06-2026 · Last updated: 05-09-2026_
+
 ---
 description: OCR a Cologne dictionary's front matter (title pages, prefaces, abbreviation lists, addenda) from the csldoc scans into faithful Markdown, then add English + Russian translations, consolidated single-file editions, and a README index. Judgment / vision OCR — Opus tier. Arg = dictionary code (e.g. PWG, MW, AP90) or `all`.
 ---
@@ -224,3 +226,5 @@ Push only if asked. If push is rejected (remote moved), `git fetch` + `git rebas
 - Don't commit temp crops (the first PWG commit accidentally swept in ~180 of them; had to be stripped before push).
 - RU: Cyrillic names, no redundant Latin parens; keep work-titles in original script.
 - Source ≠ German for most dicts — detect language; produce `.ru` always, `.en` only when source isn't English.
+
+_Dr. Mārcis Gasūns_

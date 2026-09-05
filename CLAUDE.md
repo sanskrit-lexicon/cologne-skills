@@ -1,3 +1,5 @@
+_Created: 03-07-2026 · Last updated: 05-09-2026_
+
 # CLAUDE.md
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
@@ -84,3 +86,5 @@ Then invoke by slash name, e.g. `/cologne-php-xss-sweep csl-santam`.
   have machine-specific paths that need parameterizing first. Don't assume
   their absence is an oversight to silently "fix" by copying them in
   unparameterized.
+
+_Dr. Mārcis Gasūns_

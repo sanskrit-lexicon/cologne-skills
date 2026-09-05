@@ -1,3 +1,5 @@
+_Created: 03-07-2026 · Last updated: 05-09-2026_
+
 ---
 name: cologne-markup-batch
 description: Prepare and execute Sanskrit Lexicon / Cologne Digital Sanskrit Dictionaries markup-normalization batches. Use when a GitHub issue or local task asks an agent to normalize XML-like tags, abbreviation markup, link markup, lexical markup, or recurring dictionary source patterns across CDSL repos such as csl-orig, PWG, PWK, MWS, AP90, SKD, VCP, WIL, SHS, or related correction staging repos, after any meaning-dependent marker, abbreviation, or tag interpretation has been resolved.
@@ -37,3 +39,5 @@ Write and follow this skill so it works in both Codex and Claude Code. Treat `$s
 Prefer one issue, one dictionary, and one markup pattern per batch. Do not combine unrelated tag families just because they are easy to find in the same pass.
 
 Do not silently edit scan-faithful files such as `printchange.txt` unless the task is explicitly about print deviation notes.
+
+_Dr. Mārcis Gasūns_

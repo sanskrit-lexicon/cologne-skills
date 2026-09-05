@@ -1,3 +1,5 @@
+_Created: 03-07-2026 · Last updated: 05-09-2026_
+
 # Markup Batch Workflow
 
 Use this reference for Cologne dictionary tasks that normalize recurring markup while preserving source text.
@@ -45,3 +47,5 @@ When stopping or handing off, record:
 - files generated or intentionally not generated
 - validation commands and outcome
 - remaining candidates or blockers
+
+_Dr. Mārcis Gasūns_

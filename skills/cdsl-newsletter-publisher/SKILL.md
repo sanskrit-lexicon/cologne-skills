@@ -1,3 +1,5 @@
+_Created: 03-07-2026 · Last updated: 05-09-2026_
+
 ---
 name: cdsl-newsletter-publisher
 description: Prepare Cologne Digital Sanskrit Lexicon newsletter blog posts and email drafts. Use when a GitHub issue, PR, or local task asks an agent to create or update monthly or annual CDSL newsletters across csl-guides and csl-newsletter, including draft-newsletter.py date windows, Docusaurus blog frontmatter, email markdown files, archive/readme synchronization, and build checks.
@@ -31,3 +33,5 @@ Stop and report when the date window is ambiguous, the corresponding blog/email 
 ## References
 
 - Read `references/newsletter-workflow.md` for file naming, date windows, and validation expectations.
+
+_Dr. Mārcis Gasūns_

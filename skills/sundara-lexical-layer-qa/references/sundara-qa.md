@@ -1,3 +1,5 @@
+_Created: 03-07-2026 · Last updated: 05-09-2026_
+
 # Sundara QA Reference
 
 Use this reference for Sundarakanda annotation work in `CommentaryStrategies`.
@@ -44,3 +46,5 @@ Report chapter number, accepted/rejected counts, density, notes added/removed/re
 - QA Sundara ch.27 lexical notes after a low rejection pass.
 - Explain why a recap chapter is below the target density by design.
 - Refresh documentation after the Phase-1 lexical layer changes note totals.
+
+_Dr. Mārcis Gasūns_

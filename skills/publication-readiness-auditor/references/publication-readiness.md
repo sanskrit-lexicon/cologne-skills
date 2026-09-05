@@ -1,3 +1,5 @@
+_Created: 03-07-2026 · Last updated: 05-09-2026_
+
 # Publication Readiness Reference
 
 Use this reference for article/manuscript readiness audits across scholarly project repos.
@@ -37,3 +39,5 @@ Report article ID, target journal, files checked, verdict, validation command/re
 - Audit whether A21 is still 5/5 after roadmap edits.
 - Verify ORCID/email/byline consistency before journal submission.
 - Decide whether a manuscript can move from draft to submission-staged.
+
+_Dr. Mārcis Gasūns_

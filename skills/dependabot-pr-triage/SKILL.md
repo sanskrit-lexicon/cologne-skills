@@ -1,3 +1,5 @@
+_Created: 03-07-2026 · Last updated: 05-09-2026_
+
 ---
 name: dependabot-pr-triage
 description: Triage Dependabot dependency update pull requests across JavaScript and Python repositories. Use when a GitHub PR, issue, or local task asks an agent to inspect a Dependabot PR, classify patch/minor/major risk, evaluate release notes, choose minimal npm or Python validation commands, and recommend merge, hold, close, or follow-up work.
@@ -31,3 +33,5 @@ Stop and ask or report when the PR is not from Dependabot, release notes are una
 ## References
 
 - Read `references/dependabot-triage.md` for risk classes, validation commands, and outcome wording.
+
+_Dr. Mārcis Gasūns_

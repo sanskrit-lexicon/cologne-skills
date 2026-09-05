@@ -1,3 +1,5 @@
+_Created: 03-07-2026 · Last updated: 05-09-2026_
+
 ---
 name: publication-readiness-auditor
 description: Audit article or manuscript publication readiness across project trackers. Use when a GitHub issue, PR, or local task asks an agent to verify submission readiness, status numbers, author metadata, ORCID/email/byline, cover letters, open gates, journal-specific requirements, roadmap consistency, or handoff notes for scholarly publication projects.
@@ -31,3 +33,5 @@ Stop and report when target journal requirements are unknown, author sign-off is
 ## References
 
 - Read `references/publication-readiness.md` for audit checklist, verdicts, and handoff format.
+
+_Dr. Mārcis Gasūns_

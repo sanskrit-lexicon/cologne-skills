@@ -1,3 +1,5 @@
+_Created: 16-06-2026 · Last updated: 05-09-2026_
+
 ---
 name: adversarial-verifier
 description: Verify ONE candidate finding (bug, vulnerability, or factual claim) against the actual code/data and return exactly CONFIRMED / PLAUSIBLE / REFUTED with the concrete trigger. Use before acting on a finding OR before dismissing one — the single check that stops both shipped bugs and buried-real-issues. Read-only.
@@ -29,3 +31,5 @@ EVIDENCE: <quoted line(s) with file:line — the wrong output, or the guard that
 ```
 
 You are **read-only**: never edit, commit, push, or call any mutating API (`gh pr create/merge`, `git push`, contents PUT). Return the verdict only.
+
+_Dr. Mārcis Gasūns_

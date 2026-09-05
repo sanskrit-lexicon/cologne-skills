@@ -1,3 +1,5 @@
+_Created: 03-07-2026 · Last updated: 05-09-2026_
+
 ---
 name: commentary-strategies-editorial-pipeline
 description: Synchronize and validate CommentaryStrategies publication state. Use when a GitHub issue, PR, or local task asks an agent to align manuscript frontmatter, ARTICLES/GTD/roadmap status, readiness gates, ORCID/email/byline metadata, forbidden-string rules, .ai_state.md, or scripts/validate.py outcomes in the CommentaryStrategies repository.
@@ -31,3 +33,5 @@ Stop and report findings when the canonical state conflicts across sources, an a
 ## References
 
 - Read `references/commentary-pipeline.md` for canonical files, hard rules, and validation expectations.
+
+_Dr. Mārcis Gasūns_

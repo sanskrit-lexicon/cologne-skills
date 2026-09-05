@@ -1,3 +1,5 @@
+_Created: 03-07-2026 · Last updated: 05-09-2026_
+
 ---
 name: sundara-lexical-layer-qa
 description: Review and maintain Sundara lexical, etymology, and cross-text annotation layers in CommentaryStrategies. Use when a GitHub issue, PR, or local task asks an agent to QA lexical notes, rejected candidates, density targets, adversarial gate behavior, lemma deduplication, review_required flags, recap-chapter low yield, or generated Sundara corpus/HTML counts.
@@ -31,3 +33,5 @@ Stop and leave a research note when evidence is insufficient, a note requires Sa
 ## References
 
 - Read `references/sundara-qa.md` for QA regimes, acceptance criteria, and reporting expectations.
+
+_Dr. Mārcis Gasūns_

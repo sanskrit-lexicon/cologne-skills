@@ -1,3 +1,5 @@
+_Created: 03-07-2026 · Last updated: 05-09-2026_
+
 # Dependabot PR Triage Reference
 
 Use this reference for dependency PRs in repos such as `csl-guides`, `RuWritingStyles`, `Systema-Sanscriticum`, and `SanskritKaraoke`.
@@ -45,3 +47,5 @@ Always include evidence: release-note signal, changed files, commands run, and r
 - Triage a Dependabot axios patch bump.
 - Review a Playwright patch update for test-loader regressions.
 - Classify a LangChain provider update as tooling-sensitive before recommending merge.
+
+_Dr. Mārcis Gasūns_

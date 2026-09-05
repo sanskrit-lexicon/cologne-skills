@@ -1,3 +1,5 @@
+_Created: 03-07-2026 · Last updated: 05-09-2026_
+
 # CommentaryStrategies Pipeline Reference
 
 Use this reference for `C:\Users\user\Documents\GitHub\CommentaryStrategies`.
@@ -43,3 +45,5 @@ Report the article/A-number, files checked, canonical state chosen, discrepancie
 - Align A21 readiness across manuscript/readiness files, `ARTICLES`, GTD, and roadmap.
 - Remove a forbidden Leonov attribution and make `scripts/validate.py` green.
 - Normalize all manuscript `status:` fields to the hub readiness vocabulary.
+
+_Dr. Mārcis Gasūns_

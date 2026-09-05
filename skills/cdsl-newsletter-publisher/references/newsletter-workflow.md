@@ -1,3 +1,5 @@
+_Created: 03-07-2026 · Last updated: 05-09-2026_
+
 # CDSL Newsletter Workflow
 
 Use this reference for paired work in:
@@ -45,3 +47,5 @@ If a build is too expensive or fails for unrelated existing content, report the 
 - Draft the August 2026 CDSL newsletter with `--since 2026-08-01 --until 2026-08-31`.
 - Add annual CDSL newsletter posts for a range of years.
 - Prepare future monthly stubs with exact commands for month-end generation.
+
+_Dr. Mārcis Gasūns_

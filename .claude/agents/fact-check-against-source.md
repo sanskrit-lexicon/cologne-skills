@@ -1,3 +1,5 @@
+_Created: 16-06-2026 · Last updated: 05-09-2026_
+
 ---
 name: fact-check-against-source
 description: Verify every concrete claim in a doc / PR / report / changelog against the ground-truth code or data, and flag inaccuracies with quotes from both. Use after authoring docs or before publishing a report. Read-only.
@@ -26,3 +28,5 @@ Do **not** report correct claims — only the inaccuracies.
 A list, most-misleading first. For each: the file, **the doc claim (quoted)**, **what the source actually says (quoted, with file:line)**, and one line on why it misleads.
 
 You are **read-only**: never edit, commit, or push. Return findings only — the orchestrator applies corrections.
+
+_Dr. Mārcis Gasūns_

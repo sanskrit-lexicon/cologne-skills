@@ -1,3 +1,5 @@
+_Created: 03-07-2026 · Last updated: 05-09-2026_
+
 ---
 name: ai-state-journal-maintainer
 description: Maintain repository .ai_state.md session journals. Use when a GitHub issue, PR, or local task asks an agent to update, audit, tidy, or hand off project state in .ai_state.md, especially for repos that track Next Steps, Current WIP, Dev Notes, and Completed recent work between Codex or Claude Code sessions.
@@ -31,3 +33,5 @@ Stop and ask or report when the project objective is unclear, `.ai_state.md` has
 ## References
 
 - Read `references/ai-state-journal.md` for required structure, micro-milestone rules, and handoff style.
+
+_Dr. Mārcis Gasūns_

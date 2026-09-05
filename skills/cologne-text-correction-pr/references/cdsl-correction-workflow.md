@@ -1,3 +1,5 @@
+_Created: 03-07-2026 · Last updated: 05-09-2026_
+
 # CDSL Correction Workflow
 
 Use this reference when preparing source-text corrections for Sanskrit Lexicon repositories.
@@ -52,3 +54,5 @@ Include:
 - before/after summary;
 - validation command and result;
 - any human decision that the change relies on.
+
+_Dr. Mārcis Gasūns_
