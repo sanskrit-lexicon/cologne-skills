@@ -182,7 +182,7 @@ for lang,(suf,outname,title,pw,srcw) in LANGS.items():
         if not os.path.exists(src): continue
         meta,txt=split(open(src,encoding='utf-8').read())
         h=f'{pw} {nn} — {meta.get("source_page","")} (vol. {meta.get("volume","?")})'
-        out.append(f'- [{h}](#{slug(h)})')
+        out.append(f'- {h}})')
         # demote in-body headings so the page heading stays the top level (H2)
         txt=re.sub(r'(?m)^(#{1,5})(\s)', r'#\1\2', txt)
         body.append(f'\n---\n\n## {h}\n\n<sub>{srcw}: [{meta.get("source_scan","")}]({meta.get("source_url","")})</sub>\n\n{txt}\n')
