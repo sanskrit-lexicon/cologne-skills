@@ -174,7 +174,7 @@ def slug(s):
     s=re.sub(r'[^\w\s-]','',s.lower(),flags=re.UNICODE); return re.sub(r'\s+','-',s.strip())
 pages = sorted(glob.glob(os.path.join(HERE, f'{CODE}pref[0-9][0-9].md')))
 for lang,(suf,outname,title,pw,srcw) in LANGS.items():
-    out=[f'# {title}\n', f'Per-page files: `{CODE}prefNN{suf}`. Index: [README.md](README.md).\n', '## Contents\n']
+    out=[f'# {title}\n', f'Per-page files: `{CODE}prefNN{suf}`. Index: [README.md](../../../Uprava-h4060-drain/README.md).\n', '## Contents\n']
     body=[]
     for de in pages:
         nn=re.search(r'(\d\d)\.md$', de).group(1)
@@ -185,7 +185,7 @@ for lang,(suf,outname,title,pw,srcw) in LANGS.items():
         out.append(f'- {h}})')
         # demote in-body headings so the page heading stays the top level (H2)
         txt=re.sub(r'(?m)^(#{1,5})(\s)', r'#\1\2', txt)
-        body.append(f'\n---\n\n## {h}\n\n<sub>{srcw}: [{meta.get("source_scan","")}]({meta.get("source_url","")})</sub>\n\n{txt}\n')
+        body.append(f'\n---\n\n## {h}\n\n<sub>{srcw}: {meta.get("source_scan","")}})</sub>\n\n{txt}\n')
     open(os.path.join(HERE,outname),'w',encoding='utf-8').write('\n'.join(out+body).rstrip()+'\n')
     print('wrote', outname)
 ```
